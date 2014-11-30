@@ -1,0 +1,47 @@
+    /*
+    *Problem : Distinct Character Subsequence
+    *Date : 07-11-2014
+    *
+    */
+    #include<stdio.h>
+    #include<string.h>
+    int main(){
+    int T;
+    char string[100001];
+    int chars[26];
+    int slen;
+    int i,j;
+    int temp,max;
+    int index;
+    scanf("%d",&T);
+    while(T--){
+    temp=0;
+    max=0;
+    scanf("%s",string);
+    slen=strlen(string);
+    for(i=0;i<25;i++)
+    chars[i]=0;
+    for(i=0;i<slen;i++)
+    {
+    index=string[i]-97;
+    if(chars[index]==1)
+    {
+    //if(temp>max)
+    // max = temp;
+    //temp=1;
+    // for(j=0;j<25;j++)
+    // chars[j]=0;
+    //chars[index]=1;
+     
+    }else{
+    chars[index]++;
+    temp++;
+    }
+    }
+    if(temp>max)
+    max=temp;
+    printf("%d\n",max);
+    }
+    return 0;
+    }
+
